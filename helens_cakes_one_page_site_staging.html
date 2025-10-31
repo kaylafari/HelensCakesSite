@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helen’s Cakes | Custom Cakes in San Fernando</title>
+  <meta name="description" content="Helen’s Cakes – elegant custom cakes in San Fernando. View recent bakes on Instagram, see hours, and get in touch by phone." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Helen’s Cakes" />
+  <meta property="og:description" content="Elegant custom cakes, modern–vintage vibe with a lotus touch." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://helenscakes.com" />
+  <meta property="og:image" content="/social-share.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon placeholder (replace /favicon.ico when deploying) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Fonts: modern‑vintage pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #fffdf8;           /* warm off‑white */
+      --ink: #2a2a2a;          /* charcoal */
+      --muted: #6b6b6b;        /* subtle gray */
+      --gold: #C6A662;         /* soft brushed gold */
+      --gold-2: #b9974a;
+      --ring: rgba(198,166,98,.25);
+      --radius: 18px;
+      --maxw: 1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
+
+    /* Layout */
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px}
+    header.nav{position:sticky;top:0;background:rgba(255,253,248,.85);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid rgba(0,0,0,.06);z-index:40}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--ink)}
+    .brand img{width:56px;height:56px;object-fit:contain;border-radius:50%;box-shadow:0 0 0 2px var(--ring)}
+    .brand h1{font-family:"Great Vibes", cursive;margin:0;font-size:34px;letter-spacing:.3px}
+    .nav a{color:var(--ink);text-decoration:none;font-weight:500}
+    .nav-links{display:flex;gap:18px}
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid var(--gold);
+      text-decoration:none;color:var(--ink);font-weight:600;box-shadow:0 2px 0 0 var(--ring);
+    }
+    .btn:hover{background:linear-gradient(180deg, rgba(198,166,98,.12), rgba(198,166,98,.04));}
+
+    /* Hero */
+    .hero{position:relative;padding:72px 20px 44px;border-bottom:1px solid rgba(0,0,0,.06)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
+    .hero h2{font-family:"Playfair Display", serif;font-size:42px;line-height:1.2;margin:0 0 10px}
+    .script{font-family:"Great Vibes",cursive;font-size:44px;color:var(--gold-2)}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .gold-rule{height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);margin:22px 0}
+    .hero-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+
+    /* Section shells */
+    section{padding:44px 0}
+    .section-title{font-family:"Playfair Display",serif;font-weight:600;font-size:28px;margin:0 0 8px}
+    .section-sub{color:var(--muted);margin:0 0 20px}
+
+    /* About */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .about .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:22px}
+
+    /* IG feed */
+    .ig-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:16px}
+    .ig-note{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}
+    .contact-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:22px}
+    .kvs{display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
+    .kvs dt{color:#777}
+    .kvs a{color:inherit}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);border-radius:999px;padding:6px 10px;font-weight:600}
+
+    /* Footer */
+    footer{border-top:1px solid rgba(0,0,0,.06);padding:24px 0 60px;color:#666;font-size:14px}
+    footer a{color:inherit}
+    .legal{display:flex;gap:16px;flex-wrap:wrap}
+
+    /* Gold ornaments */
+    .ornament{height:10px;margin:10px 0;background:
+      radial-gradient(circle at 0 50%, transparent 9px, var(--gold) 10px, transparent 11px) left/22px 100% repeat-x}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .brand h1{font-size:28px}
+      .script{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">
+        <!-- Replace src with your deployed logo path (place logo file as /logo.png) -->
+        <img src="/logo.png" alt="Helen’s Cakes lotus logo" />
+        <h1>Helen’s Cakes</h1>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#contact" class="btn">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top" class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <div class="script">Hand‑crafted with love</div>
+        <h2>Modern‑vintage cakes with a lotus touch</h2>
+        <p>Custom cakes for celebrations of every kind. Explore our latest designs on Instagram and give us a call to start your order.</p>
+        <div class="gold-rule" role="presentation"></div>
+        <div class="kvs" aria-label="Quick contact">
+          <dt>Phone</dt><dd><a href="tel:+18182314886" class="chip">📞 818‑231‑4886</a></dd>
+          <dt>Instagram</dt><dd><a class="chip" href="https://www.instagram.com/helenfarivar/" target="_blank" rel="noopener">📷 @helenfarivar</a></dd>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Hours">
+        <div class="section-title">Hours</div>
+        <p class="section-sub">Helen’s Cakes</p>
+        <div class="kvs" style="margin-bottom:10px">
+          <dt>Daily</dt><dd>9:00 AM – 6:00 PM</dd>
+        </div>
+        <div class="ornament" aria-hidden="true"></div>
+        <p class="section-sub" style="margin-top:14px">Lotus Bakery (partner)</p>
+        <div class="kvs">
+          <dt>Mon–Sat</dt><dd>9:00 AM – 6:00 PM</dd>
+          <dt>Sun</dt><dd>9:00 AM – 5:00 PM</dd>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about">
+      <div class="card">
+        <h3 class="section-title">About Helen</h3>
+        <p>Helen crafts elegant cakes inspired by timeless design—classic silhouettes, delicate florals, and just‑right gold accents. Each cake is made to order with attention to flavor and finish.</p>
+        <p>Family‑run and proudly collaborating with <a href="#lotus">Lotus Bakery</a> in San Fernando, Helen’s Cakes brings a modern‑vintage touch to weddings, birthdays, and every celebration in between.</p>
+      </div>
+      <div class="card" id="lotus">
+        <h3 class="section-title">Lotus Bakery</h3>
+        <p class="section-sub">Partner (for pick‑ups and inquiries)</p>
+        <dl class="kvs">
+          <dt>Phone</dt><dd><a href="tel:+18183655000">(818) 365‑5000</a></dd>
+          <dt>Address</dt><dd><a target="_blank" rel="noopener" href="https://maps.google.com/?q=200%20N%20Maclay%20Ave,%20San%20Fernando,%20CA%2091340">200 N Maclay Ave, San Fernando, CA 91340</a></dd>
+          <dt>Hours</dt><dd>Mon–Sat 9:00 AM – 6:00 PM · Sun 9:00 AM – 5:00 PM</dd>
+          <dt>Website</dt><dd><a target="_blank" rel="noopener" href="https://www.lotusbakeryonline.com/">lotusbakeryonline.com</a></dd>
+        </dl>
+        <p style="font-size:13px;color:#777;margin-top:8px">Shown here for convenience; primary ordering for custom cakes is via Helen’s Cakes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM FEED -->
+  <section id="instagram">
+    <div class="wrap">
+      <h3 class="section-title">Latest on Instagram</h3>
+      <p class="section-sub">Fresh bakes and recent designs from <a href="https://www.instagram.com/helenfarivar/" target="_blank" rel="noopener">@helenfarivar</a></p>
+      <div class="ig-card">
+        <!-- LightWidget WIDGET (as provided) -->
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="//lightwidget.com/widgets/81982111d4155b16bc2cbb41facd5c16.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+      </div>
+      <div class="ig-note">If the feed doesn’t load, tap to open Instagram directly: <a href="https://www.instagram.com/helenfarivar/" target="_blank" rel="noopener">@helenfarivar</a>.</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-card">
+        <h3 class="section-title">Get in touch</h3>
+        <dl class="kvs">
+          <dt>Helen’s Cakes</dt><dd><a href="tel:+18182314886" class="chip">📞 818‑231‑4886</a></dd>
+          <dt>Hours</dt><dd>Daily · 9:00 AM – 6:00 PM</dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/helenfarivar/" target="_blank" rel="noopener">@helenfarivar</a></dd>
+        </dl>
+      </div>
+      <div class="contact-card">
+        <h3 class="section-title">Visit Lotus Bakery</h3>
+        <dl class="kvs">
+          <dt>Phone</dt><dd><a href="tel:+18183655000">(818) 365‑5000</a></dd>
+          <dt>Address</dt><dd><a target="_blank" rel="noopener" href="https://maps.google.com/?q=200%20N%20Maclay%20Ave,%20San%20Fernando,%20CA%2091340">200 N Maclay Ave, San Fernando, CA 91340</a></dd>
+          <dt>Hours</dt><dd>Mon–Sat 9:00 AM – 6:00 PM · Sun 9:00 AM – 5:00 PM</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER / PRIVACY -->
+  <footer>
+    <div class="wrap">
+      <div class="gold-rule" role="presentation"></div>
+      <div class="legal">
+        <span>© <span id="yr"></span> Helen’s Cakes</span>
+        <span>·</span>
+        <a href="#privacy">Privacy</a>
+        <span>·</span>
+        <a href="#top">Back to top</a>
+      </div>
+
+      <div id="privacy" style="margin-top:18px;max-width:820px">
+        <h4 class="section-title" style="font-size:22px">Privacy Policy</h4>
+        <p class="section-sub">We respect your privacy.</p>
+        <p>
+          This website does not use cookies and does not collect personal information. If you call us or message us on social media, we will receive only the information you choose to provide. We do not sell or share personal information with third parties. Links to third‑party sites (such as Instagram and Lotus Bakery) are provided for convenience and are governed by their respective privacy policies.
+        </p>
+        <p>
+          For questions about this policy, please contact us by phone at <a href="tel:+18182314886">818‑231‑4886</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON‑LD: Local Business schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Helen’s Cakes",
+    "image": "https://helenscakes.com/social-share.jpg",
+    "telephone": "+1-818-231-4886",
+    "sameAs": ["https://www.instagram.com/helenfarivar/"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Fernando",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }]
+  }
+  </script>
+
+  <script>
+    // Footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
