@@ -60,8 +60,21 @@
     .chip{display:inline-flex;align-items:center;gap:1px;border:1px solid var(--gold);border-radius:999px;padding:4px 12px;font-weight:500}
 
     .lotus-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .dd-btn{display:inline-block;border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 18px rgba(0,0,0,.06)}
-    .dd-btn img{display:block;max-width:30%;height:auto}
+    .dd-btn {
+      display: inline-block;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      overflow: visible;
+      background: none;
+    }
+    
+    .dd-btn img {
+      display: block;
+      width: 180px; /* or 200px, adjust as needed */
+      height: auto;
+      max-width: 100%;
+    }
 
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr}
@@ -75,9 +88,8 @@
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">
-        <img src="/cakelogo.png" alt="Helen’s Cakes lotus logo" />
-        <h1>Helen’s Cakes</h1>
+      <a class="brand" href="#top" style="justify-content:center;">
+        <img src="/cakelogo.png" alt="Helen’s Cakes logo" style="width:180px;height:auto;object-fit:contain;" />
       </a>
       <nav class="nav-links">
         <a href="#lotus">Lotus Bakery</a>
@@ -86,6 +98,7 @@
       </nav>
     </div>
   </header>
+
 
   <main id="top" class="wrap hero">
     <div class="hero-grid">
