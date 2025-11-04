@@ -22,82 +22,170 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    :root{
+    :root {
       --bg:#fffdf8; --ink:#2a2a2a; --muted:#6b6b6b; --gold:#C6A662; --gold-2:#b9974a; --ring:rgba(198,166,98,.25);
       --radius:18px; --maxw:1120px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
-
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 20px}
-    header.nav{position:sticky;top:0;background:rgba(255,253,248,.85);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid rgba(0,0,0,.06);z-index:40}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:18px;text-decoration:none;color:var(--ink)}
-    .brand img{width:86px;height:86px;object-fit:contain;border-radius:50%;box-shadow:0 0 0 2px var(--ring)}
-    .brand h1{font-family:"Great Vibes",cursive;margin:0;font-size:40px;letter-spacing:.3px}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--ink);
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      line-height:1.6;
+    }
+  
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:16px 20px}
+  
+    /* ---- HEADER ---- */
+    header.nav{
+      position:sticky;
+      top:0;
+      background:rgba(255,253,248,.85);
+      backdrop-filter:saturate(1.2) blur(6px);
+      border-bottom:1px solid rgba(0,0,0,.06);
+      z-index:40;
+      padding:0px 0;
+    }
+    .nav-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:4px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--ink);
+    }
+    .brand img{
+      width:140px;
+      height:auto;
+      object-fit:contain;
+      border-radius:0;
+      box-shadow:none;
+      margin:0;
+    }
+    .brand h1{
+      font-family:"Great Vibes",cursive;
+      margin:0;
+      font-size:32px;
+      letter-spacing:.3px;
+    }
+  
     .nav a{color:var(--ink);text-decoration:none;font-weight:500}
-    .nav-links{display:flex;gap:18px}
-    .btn{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid var(--gold);text-decoration:none;color:var(--ink);font-weight:600;box-shadow:0 2px 0 0 var(--ring)}
-    .btn:hover{background:linear-gradient(180deg, rgba(198,166,98,.12), rgba(198,166,98,.04))}
-
-    .hero{position:relative;padding:72px 20px 44px;border-bottom:1px solid rgba(0,0,0,.06)}
+    .nav-links{display:flex;align-items:center;gap:16px}
+    .btn{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid var(--gold);
+      text-decoration:none;
+      color:var(--ink);
+      font-weight:600;
+      box-shadow:0 2px 0 0 var(--ring);
+    }
+    .btn:hover{
+      background:linear-gradient(180deg, rgba(198,166,98,.12), rgba(198,166,98,.04));
+    }
+  
+    /* ---- HERO ---- */
+    .hero{position:relative;padding:60px 20px 36px;border-bottom:1px solid rgba(0,0,0,.06)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center}
-    .hero h2{font-family:"Playfair Display",serif;font-size:42px;line-height:1.2;margin:6px 0 8px}
+    .hero h2{
+      font-family:"Playfair Display",serif;
+      font-size:42px;
+      line-height:1.2;
+      margin:6px 0 8px;
+    }
     .script{font-family:"Great Vibes",cursive;font-size:44px;color:var(--gold-2)}
     .hero p{color:var(--muted);margin:0 0 12px}
-    .gold-rule{height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);margin:16px 0}
-    .hero-card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:20px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
-
+    .gold-rule{
+      height:1px;
+      background:linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin:16px 0;
+    }
+    .hero-card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.05);
+    }
+  
     section{padding:44px 0}
-    .section-title{font-family:"Playfair Display",serif;font-weight:600;font-size:28px;margin:0 0 8px}
+    .section-title{
+      font-family:"Playfair Display",serif;
+      font-weight:600;
+      font-size:28px;
+      margin:0 0 8px;
+    }
     .section-sub{color:var(--muted);margin:0 0 20px}
-
-    .ig-card,.card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:16px}
+  
+    .ig-card,.card{
+      background:#fff;
+      border:1px solid rgba(0,0,0,.06);
+      border-radius:var(--radius);
+      padding:16px;
+    }
     .kvs{display:grid;grid-template-columns:auto 1fr;gap:6px 14px}
     .kvs dt{color:#777}
     .kvs a{color:inherit}
-    .chip{display:inline-flex;align-items:center;gap:1px;border:1px solid var(--gold);border-radius:999px;padding:4px 12px;font-weight:500}
-
+    .chip{
+      display:inline-flex;
+      align-items:center;
+      gap:1px;
+      border:1px solid var(--gold);
+      border-radius:999px;
+      padding:4px 12px;
+      font-weight:500;
+    }
+  
     .lotus-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
     .dd-btn {
-      display: inline-block;
-      border: none;
-      box-shadow: none;
-      border-radius: 0;
-      overflow: visible;
-      background: none;
+      display:inline-block;
+      border:none;
+      box-shadow:none;
+      border-radius:0;
+      overflow:visible;
+      background:none;
     }
-    
     .dd-btn img {
-      display: block;
-      width: 180px; /* or 200px, adjust as needed */
-      height: auto;
-      max-width: 100%;
+      display:block;
+      width:180px;
+      height:auto;
+      max-width:100%;
     }
-
+  
     @media (max-width:980px){
       .hero-grid{grid-template-columns:1fr}
       .lotus-grid{grid-template-columns:1fr}
-      .brand h1{font-size:34px}
-      .brand img{width:72px;height:72px}
+      .brand img{width:100px}
+      .brand h1{font-size:28px}
       .script{font-size:38px}
     }
   </style>
+  
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner" style="justify-content:space-between;align-items:center;">
+  <header class="nav" style="padding:1px 0;">
+    <div class="wrap nav-inner" style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
       <a class="brand" href="#top" style="display:flex;align-items:center;justify-content:center;text-decoration:none;">
-        <img src="/cakelogo.png" alt="Helen’s Cakes logo" style="width:220px;height:auto;display:block;border:none;border-radius:0;box-shadow:none;" />
+        <img src="/cakelogo.png" alt="Helen’s Cakes logo" style="width:270px;height:auto;display:block;border:none;border-radius:0;box-shadow:none;margin:0;" />
       </a>
-      <nav class="nav-links">
+      <nav class="nav-links" style="display:flex;align-items:center;gap:18px;">
         <a href="#lotus">Lotus Bakery</a>
         <a href="#instagram">Instagram</a>
-        <a href="#contact" class="btn">Call Now</a>
+        <a href="tel:+18182314886" class="btn" style="margin-top:0;">Call Now</a>
       </nav>
     </div>
   </header>
+  
+  
 
 
 
@@ -106,8 +194,8 @@
       <div>
         <div class="script">Experience the best cake ever</div>
         <h2>Custom cakes and pastries however you’d like it.</h2>
-        <p>Visit our Instagram for a gallery of the cakes we’ve made.</p>
-        <p><strong>Ready to order?</strong> Call or text us now!</p>
+        <p>Get Helen's help to fulfill your vision. Can't pick up the cake? We offer delivery around the San Fernando Valley and Los Angeles Area. Don't know what you want? Scroll below or visit Helens's instagram where you can find a gallary of different cakes we've made!</p>
+        <p><strong>Ready to order?</strong> Call or text us now! </p>
         <div class="gold-rule" role="presentation"></div>
       </div>
       <aside class="hero-card" aria-label="Contact">
@@ -124,7 +212,7 @@
   <section id="lotus">
     <div class="wrap">
       <h3 class="section-title">Lotus Bakery</h3>
-      <p class="section-sub">Partner location for pick-ups and inquiries</p>
+      <p class="section-sub">Our partner bakery!</p>
       <div class="lotus-grid">
         <div class="card">
           <dl class="kvs">
@@ -135,10 +223,15 @@
           </dl>
         </div>
         <div class="card">
-          <p><strong>Helen’s cakes are made by Lotus Bakery.</strong> Want something simple? You can DoorDash it now! Last-minute birthday cakes, chocolate strawberries for her, or fruit tarts to share! Get it delivered fast and simple.</p>
-          <a class="dd-btn" href="https://www.doordash.com/en-US/store/lotus-bakery-san-fernando-30233353?srsltid=AfmBOopAeZ1SR1Vq_f3kJFtpnRPx0Apbeg9JGF798gGwjopaSyir-BJW" target="_blank" rel="noopener">
-            <img src="/button-doordash.png" alt="Order online with DoorDash" />
-          </a>
+          <p><strong>Helen’s cakes are made by Lotus Bakery.</strong> Want something simple? You can DoorDash it or UberEats it now! Last-minute birthday cakes, chocolate strawberries for her, or fruit tarts to share! Get it delivered fast and simple.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:8px;">
+            <a class="dd-btn" href="https://www.doordash.com/en-US/store/lotus-bakery-san-fernando-30233353?srsltid=AfmBOopAeZ1SR1Vq_f3kJFtpnRPx0Apbeg9JGF798gGwjopaSyir-BJW" target="_blank" rel="noopener">
+              <img src="/button-doordash.png" alt="Order online with DoorDash" />
+            </a>
+            <a class="dd-btn" href="https://www.ubereats.com/store/lotus-bakery-san-fernando/TmpzsR7bVMuhsZIL77Vbxg?srsltid=AfmBOooPcIhg9MtlCiVSFfTa0gVkK_BC0L5HupadQfC5HFmSkdKbwnNi" target="_blank" rel="noopener">
+              <img src="/button-ubereats.png" alt="Order online with Uber Eats" />
+            </a>
+          </div>          
         </div>
       </div>
     </div>
